@@ -51,11 +51,13 @@ class UserController{
     }
     static async deleteUser(req,res){
         const {id}= req.params;
+        const user = req.usuario
 
         const usuario = await Usuario.findByIdAndUpdate(id,{estado:false})
 
         res.json({
-            usuario
+            usuario,
+            user
         })
     }
 }
