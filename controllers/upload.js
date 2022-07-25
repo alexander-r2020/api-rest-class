@@ -34,9 +34,7 @@ class UploadController{
         }
         return res.status(httpStatus.OK).json({
             msg: "Product was updated successfully",
-            data: {
-              producto
-            },
+            producto
           });
         
     }
