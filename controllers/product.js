@@ -2,6 +2,7 @@ const Producto = require('../models/producto');
 const httpStatus = require('../helpers/httpStatus');
 const httpResponses = require("../constants/httpResponses");
 
+
 class ProductController{
     static async getAllProduct(req,res){
         let producto;
@@ -36,6 +37,7 @@ class ProductController{
 
         const {nombre,precio,descripcion,categoria} = req.body
         let producto;
+        
         try{
          producto = new Producto( {nombre,precio,descripcion,categoria} );
         await producto.save();

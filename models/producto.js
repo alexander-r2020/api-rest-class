@@ -15,6 +15,9 @@ const ProductoSchema = Schema({
         type: Number,
         default:0,
     },
+    img:{
+        type:String
+    },
     descripcion:{
         type:String,
         required:[true,"almeos debe tener una descripcion"]
